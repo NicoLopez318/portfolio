@@ -165,7 +165,7 @@
   .contact-inner { padding-block: 81px 86px; }
   .contact-inner h2 { font-size: clamp(37px, 9vw, 56px); }
   .site-footer { min-height: 80px; flex-wrap: wrap; gap: 5px 15px; }
-  .site-footer p { order: 3; width: 100%; padding-bottom: 13px; }
+  .site-footer p { order: 3; width: 100%; padding-bottom: 13px; text-align: center; }
 }
 @media (max-width: 360px) {
   .section-wrap, .header-inner { width: calc(100% - 32px); }
