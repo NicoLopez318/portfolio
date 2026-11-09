@@ -1,25 +1,38 @@
-body{
-  background-color: #111827;
+:root {
+  color-scheme: dark;
+  --paper: #0c1210;
+  --paper-deep: #121b17;
+  --ink: #edf2eb;
+  --muted: #a6b0a8;
+  --line: #2b3830;
+  --green: #c5e28a;
+  --green-dark: #263c31;
+  --white: #fff;
+  --font-body: Inter, "Segoe UI", Arial, sans-serif;
+  --font-display: Inter, "Segoe UI", Arial, sans-serif;
 }
 
-nav{
-  display: flex;
-  justify-content: center;
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
 }
+a { color: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+::selection { background: var(--green); color: var(--ink); }
+:focus-visible { outline: 3px solid var(--green); outline-offset: 4px; }
 
-nav ul {
-  display: flex;
-  gap: 30px;
-  list-style: none;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-size: 18px;
-  transition: 0.3s;
-}
-
-nav ul li a:hover {
-  color: #ffcc00;
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

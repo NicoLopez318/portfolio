@@ -1,22 +1,24 @@
-import Link from "next/link";
-import"./globals.css";
+import type { Metadata } from "next";
+import Nav from "./components/nav";
+import "./globals.css";
 
-export default function Home() {
-return (
-  <html lang="en">
-    <body>
-      <main>
-        <nav>
-          <ul>
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/about">About</Link></li>
-            <li><Link href="/skills">Skills</Link></li>
-            <li><Link href="/projects">Projects</Link></li>
-            <li><Link href="/contact">Contact</Link></li>
-          </ul>
-        </nav>
-      </main>
-    </body>
-  </html>
-)
+export const metadata: Metadata = {
+  title: "Capstone Project Support — Nico and Team",
+  description:
+    "Commissioned technical guidance and coaching for IT capstone projects, from system planning and documentation feedback to testing and defense preparation.",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body>
+        <Nav />
+        <main id="main-content">{children}</main>
+      </body>
+    </html>
+  );
 }
